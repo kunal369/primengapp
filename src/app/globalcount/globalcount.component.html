@@ -1,0 +1,30 @@
+
+<div class="main">
+    <div class="col-md-12">
+<h1 class="sitnavH1">Global Covid19 cases</h1>
+
+    <p-card header="Global covid19 cases"  subheader="Quick Update" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+    <p-header>
+        <img src="Card" src="assets/images/coronabanner.png">
+    </p-header>
+    <button pButton type="button" (click)="getData()" label="Get Data" style="margin-right: .25em"></button>
+
+        <ul >
+            <li>Total cases: {{total_cases}} </li>
+            <li>New cases: {{new_cases}} </li>
+            <li>Total deaths: {{total_deaths}} </li>
+            <li>New deaths: {{new_deaths}} </li>
+            <li>Total recovered: {{total_recovered}} </li>
+            <li>Active cases: {{active_cases}} </li>
+            <li>Serious critical: {{serious_critical}} </li>
+            <li>Total cases per 1m population: {{total_cases_per_1m_population}} </li>
+            <li>Deaths per 1m population: {{deaths_per_1m_population}} </li>
+            <li>Statistic taken at: {{statistic_taken_at}} </li>
+        </ul>
+        <!-- <p >
+                Total Cases: {{total_cases}}
+        </p> -->
+ 
+</p-card>
+</div>
+</div>

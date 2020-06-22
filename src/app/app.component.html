@@ -1,0 +1,35 @@
+<div class="topnav" id="myTopnav">
+        <a class="topnav a" > <img src="assets/images/logo.png" alt="logo" style="width:45px;">CORONA TRACKER</a>
+     
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+<div id="mysidenav" class="sidenav"  position="left">
+    <h1 style="font-weight:normal">Covid 19</h1>
+    <h5><a routerLink="/globalcount">Global Count</a></h5>
+    <h5><a routerLink="/countrycount">Country Count</a></h5>
+</div>
+
+
+<router-outlet></router-outlet>
+
+<footer>
+    <div class="layout-footer content-section">
+                  <p>Copyright. Graffersid   </p>
+    </div>
+        
+</footer>
+<script>
+        function myFunction() {
+          var x = document.getElementById("mysidenav");
+          if (x.className == "sidenav") {
+         //   x.className += " responsive";
+         x.remove.className("sidenav");
+            x.className = "sidenavshow";
+          } else {
+            x.className = "sidenav";
+          }
+        };
+        </script>
