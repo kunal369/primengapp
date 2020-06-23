@@ -20,5 +20,15 @@ export class AppComponent {
     this.sidenavClose.emit();
   }
 
+  public openNav() {
+    document.getElementById("mySidebar2").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  public closeNav() {
+    document.getElementById("mySidebar2").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+
 
 }

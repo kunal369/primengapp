@@ -72,7 +72,7 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatListModule,
+    MatListModule, TableModule,
     RouterModule.forRoot(appRoutes)
     
   ],

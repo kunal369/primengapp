@@ -6,63 +6,35 @@
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
-      </div> -->
-      <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
-      <mat-toolbar color="primary">
-        <div fxHide.gt-xs>
-            <button mat-icon-button (click)="onToggleSidenav()">
-                <mat-icon>menu</mat-icon>
-            </button>
-        </div>
-        <div>
-            <a routerLink="/home">Owner-Account</a>
-        </div>
-        <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-            <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-                <li>
-                    <a routerLink="/owner">Owner Actions</a>
-                </li>
-                <li>
-                    <a routerLink="/account">Account Actions</a>
-                </li>
-            </ul>
-        </div>
-      </mat-toolbar>
-      <mat-nav-list>
-        <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
-            <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
-        </a>
-        <a mat-list-item routerLink="/owner" (click)="onSidenavClose()">
-            <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">Owner Actions</span>   
-        </a>
-        <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-            <mat-icon>account_balance</mat-icon><span class="nav-caption">Account Actions</span>
-        </a>
-      </mat-nav-list>
-      <mat-sidenav #sidenav role="navigation">
-        <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
-      </mat-sidenav>
+      </div>
 
 <div class="sidenav" id="mysidenav">
     <a routerLink="/globalcount" > Global Count</a><br>
     <a routerLink="/countrycount">Country Count</a>
-</div>
+</div> -->
+<div class="col-md-12">
 
+<div class="topnav" id="myTopnav">
+    <ul>
+       
+    <li class="bars"><i id="main1" (click)="openNav()" class="pi pi-bars"></i></li>
+    <li  class="maincontentheading" ><img  routerLink="/home" src="assets/images/logo.png" alt="logo" style="width:45px;" >CORONA TRACKER</li>
+      
+    </ul>
+ </div>
 
+<div class="sidebar1">
+  
+    <span  class="closebtn" (click)="closeNav()"> &larr; </span>
+    <a routerLink="/globalcount" > Global Count</a><br>
+    <a routerLink="/countrycount">Country Count</a>
+  </div>
+
+  <div id="mySidebar2" class="sidebar2">
+      <span  class="closebtn" (click)="closeNav()"> &larr; </span>
+      <a routerLink="/globalcount" > Global Count</a><br>
+      <a routerLink="/countrycount">Country Count</a>
+    </div>
+  </div>
 
 <router-outlet></router-outlet>
-
-
-
-<!--script>
-        function myFunction() {
-          var x = document.getElementById("mysidenav");
-          if (x.className == "sidenav") {
-         //   x.className += " responsive";
-         x.remove.className("sidenav");
-            x.className = "sidenavshow";
-          } else {
-            x.className = "sidenav";
-          }
-        };
-</script> -->

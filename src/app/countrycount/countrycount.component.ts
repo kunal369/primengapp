@@ -9,36 +9,33 @@ import { Router } from '@angular/router';
   providers:[CountriesService],
 })
 
-
 export class CountrycountComponent implements OnInit {
-
   public countryObj: any;
   public covidcases:any;
-  public countryFilter: any;
   
+  yearFilter: number;
+
+  yearTimeout: any;
+  constructor(private countriesService: CountriesService, private router: Router){    
+  }
 
   ngOnInit() {     
     this.countriesService.getCountryData().subscribe(res =>this.countryObj=res.json());
-    for(var i=0;i<=this.countryObj.countries_stat.length;i++){
-      console.log(JSON.stringify(this.countryObj.countries_stat[i].country_name));
-    }
+    // for(var i=0;i<=this.countryObj.countries_stat.length;i++){
+    //   console.log(JSON.stringify(this.countryObj.countries_stat[i].country_name));
+    // }   
+
     
-      
   }
-  constructor(private countriesService: CountriesService, private router: Router){    
-    }
-    
 
-    // public getData(){
-    //   this.countriesService.getData().subscribe(res =>this.loginObj=res.json());
-    //   for(var i=0;i<=this.loginObj.countries_stat.length;i++){
-    //     console.log(JSON.stringify(this.loginObj.countries_stat[i].country_name));
-    //   }
-    //  // console.log(JSON.stringify(this.loginObj.countries_stat[0].country_name));
-    //  //console.log(this.covidcases.countries_stat[3]);
 
-    //   // for(var i=0;i<=this.loginObj.countries_stat.length;i++){
-    //   //   console.log(JSON.stringify(this.loginObj.countries_stat[i].country_name));
-    //   // }
-    // }
+onYearChange(event, dt, col) {
+  if (this.yearTimeout) {
+    clearTimeout(this.yearTimeout);
+  }
+
+  this.yearTimeout = setTimeout(() => {
+    dt.filter(event.value, col.field, col.filterMatchMode);
+  }, 250);
+}
 }
