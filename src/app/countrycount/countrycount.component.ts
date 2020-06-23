@@ -8,17 +8,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./countrycount.component.css'],
   providers:[CountriesService],
 })
+
+
 export class CountrycountComponent implements OnInit {
 
   public countryObj: any;
   public covidcases:any;
   public countryFilter: any;
   
+
   ngOnInit() {     
     this.countriesService.getCountryData().subscribe(res =>this.countryObj=res.json());
     for(var i=0;i<=this.countryObj.countries_stat.length;i++){
       console.log(JSON.stringify(this.countryObj.countries_stat[i].country_name));
     }
+    
       
   }
   constructor(private countriesService: CountriesService, private router: Router){    

@@ -1,11 +1,11 @@
 <div class="main">
 <h1 class="sitnavH1">Country wise Covid19 cases</h1>
 <div class="col-md-12">
-<p-table  [value]="countryObj.countries_stat"  [paginator]="true" [rows]="10" >
-        <!-- <ng-template pTemplate="caption">
+<p-table  [value]="countryObj.countries_stat" [scrollable]="true" scrollHeight="350px"  [paginator]="true" [rows]="10" >
+        <ng-template pTemplate="caption">
                 <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
-                <input pInputText type="text" (input)="tt.filter($event.target.value, col.field, col.filterMatchMode)" placeholder="Search Country"  style="width:auto">
-            </ng-template> -->
+                <input pInputText type="text" (input)="dt.filter($event.target.value, 'country.name', 'contains')" placeholder="Search by Country" class="ui-column-filter">
+            </ng-template>
  <ng-template pTemplate="header" let-columns>
         <tr>
             <th>Country</th>

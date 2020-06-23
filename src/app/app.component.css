@@ -2,25 +2,75 @@
 
 @import url('https://use.fontawesome.com/releases/v5.1.1/css/all.css');
 
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 250px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover, a:active{
+  color: lightgray;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover, a:active{
+  color: lightgray;
+}
+
+.nav-caption{
+  display: inline-block;
+  padding-left: 6px;
+}
+.navigation-items{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+mat-toolbar{
+  border-radius: 3px;
+}
+
+@media(max-width: 959px){
+  mat-toolbar{
+      border-radius: 0px;
+  }
+}
 body{
   margin: 0;
   padding:0;
   font-family: 'Open Sans', sans-serif;
 }
 
-footer{
-  color: #707070;
-  font-weight: 600;
-  background-color: #f5f7f8;
-  border-top: 1px solid #dcdedf;
-  margin-left: 255px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding-top:10px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+.layout-sidebar{
   width: 100%;
+  height: 50px;
+  display: block;
+  padding: 1rem;
+  
+  background-color: #f8f9fa;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #6c757c;
+  font-weight: 700;
+  outline: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
 }
+
 content-section {
   display: block;
   padding: 30px;
@@ -42,11 +92,31 @@ content-section {
   left: 0;
   top: 64px;
   height: calc(100% - 64px);
-  background-color: #fff;
+  background-color:#141927;
   overflow-x: hidden;
   overflow-y: auto;
-  width: 250px;
+  width: 15%;
   box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+}
+.sidenav a {
+  display: block;
+  color: #fff;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+ 
+.sidenav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidenav a:hover:not(.active) {
+  background-color: #555;
+  color: white;
 }
 
 
@@ -63,7 +133,7 @@ body {
 .topnav {
   background-color: #1976d2;
   padding: 0;
-  height: 64px;
+  height: 62px;
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -132,15 +202,13 @@ body {
     width: 250px;
     box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
   }
-  .footer{
-    color: #707070;
-    font-weight: 600;
-    background-color: #f5f7f8;
-    border-top: 1px solid #dcdedf;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+  .sitnavH1{
+    margin-top: 0;
+    margin-bottom: 20%;
+    color:#1976d2;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
   content-section {
     padding: 30px;

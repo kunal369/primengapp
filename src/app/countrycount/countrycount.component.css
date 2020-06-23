@@ -1,7 +1,15 @@
 .main{
-  margin-left: 250px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
+  margin-left: 250px;
+  font-size: 28px; 
   padding-top:60px;
+  }
+  .sitnavH1{
+    margin-top: 0;
+    padding-top: 2.5%;
+    color:#1976d2;
+    font-size: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 .content-section {
     background: #378fe7;
@@ -11,36 +19,26 @@
     overflow: hidden;
 }
 
-.sitnavH1{
-  margin-top: 0;
-  margin-bottom: 15px;
-  color:#1976d2;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
 @media screen and (max-width: 600px) {
-
+  .sitnavH1{
+    margin-top: 0;
+    padding-top: 18%;
+    color:#1976d2;
+    font-size: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
   .main{
     margin: 0;
-    font-size: 28px; /* Increased text to enable scrolling */
+     font-size: 28px;
     padding: 0px 10px;
     }
+
     .content-section {
       background: #378fe7;
       color: #fff;
       display: block;
       padding: 30px;
       overflow: hidden;
-  }
-  
-  .sitnavH1{
-    margin-top: 0;
-    padding-top: 30%;
-    margin-bottom: 15px;
-    color:#1976d2;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
   }
 }

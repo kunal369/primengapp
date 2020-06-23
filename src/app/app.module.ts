@@ -9,9 +9,14 @@ import {SidebarModule} from 'primeng/sidebar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { RouterModule, Routes } from '@angular/router';
+import {MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import {TableModule} from 'primeng/table';
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
 import {MenuItem} from 'primeng/api';                  //api
+import { MatListModule } from '@angular/material/list';
 import {PaginatorModule} from 'primeng/paginator';
 import {CardModule} from 'primeng/card';
 
@@ -63,9 +68,22 @@ const appRoutes: Routes = [
     PaginatorModule,
     AccordionModule,
     CardModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatListModule,
     RouterModule.forRoot(appRoutes)
     
   ],
+  exports: [
+    MatListModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule
+  ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

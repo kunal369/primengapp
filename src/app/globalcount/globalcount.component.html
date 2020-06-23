@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="main">
     <div class="col-md-12">
 <h1 class="sitnavH1">Global Covid19 cases</h1>
@@ -21,10 +21,85 @@
             <li>Deaths per 1m population: {{deaths_per_1m_population}} </li>
             <li>Statistic taken at: {{statistic_taken_at}} </li>
         </ul>
-        <!-- <p >
+        <p >
                 Total Cases: {{total_cases}}
-        </p> -->
+        </p>
  
 </p-card>
 </div>
+</div> -->
+<div class="main">
+    <div class="col-md-12">
+        <h2 class="sitnavH1"> Global Cases</h2>
+        <br>            
+      <div class="row">
+        <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+          <div class="card cardb-pink cardb-hover-shadow text-white text-center card-shadow-info">
+            <div class="card-body">
+              <h6 class="font-weight-normal">active cases</h6>
+              <h2 class="mb-0">{{globalCases.active_cases}}</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+          <div class="card cardb-orange cardb-hover-shadow text-white text-center card-shadow-danger">
+            <div class="card-body">
+              <h6 class="font-weight-normal">deaths per 1m population</h6>
+              <h2 class="mb-0">{{globalCases.deaths_per_1m_population}}</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+          <div class="card cardb-bluegrey cardb-hover-shadow text-center card-shadow-warning">
+            <div class="card-body">
+              <h6 class="font-weight-normal">new cases</h6>
+              <h2 class="mb-0">{{globalCases.new_cases}}</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+          <div class="card cardb-green cardb-hover-shadow text-white text-center card-shadow-primary">
+            <div class="card-body">
+              <h6 class="font-weight-normal">new deaths</h6>
+              <h2 class="mb-0">{{globalCases.new_deaths}}</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+            <div class="card cardb-darkpurple cardb-hover-shadow text-white text-center card-shadow-primary">
+              <div class="card-body">
+                <h6 class="font-weight-normal">serious critical</h6>
+                <h2 class="mb-0">{{globalCases.serious_critical}}</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+            <div class="card cardb-blue cardb-hover-shadow text-white text-center card-shadow-primary">
+              <div class="card-body">
+                <h6 class="font-weight-normal">total cases</h6>
+                <h2 class="mb-0">{{globalCases.total_cases}}</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+            <div class="card cardb-indigo cardb-hover-shadow text-white text-center card-shadow-primary">
+              <div class="card-body">
+                <h6 class="font-weight-normal">total deaths</h6>
+                <h2 class="mb-0">{{globalCases.total_deaths}}</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+            <div class="card cardb-brown cardb-hover-shadow text-white text-center card-shadow-primary">
+              <div class="card-body">
+                <h6 class="font-weight-normal">total recovered</h6>
+                <h2 class="mb-0">{{globalCases.total_recovered}}</h2>
+              </div>
+            </div>
+          </div>
+      </div>
+      <br>  
+      <br>     
+    </div>
+    <!-- content-wrapper ends -->
 </div>
